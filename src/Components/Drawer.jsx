@@ -6,10 +6,17 @@ import {
   DrawerContent,
   DrawerCloseButton,
   useDisclosure,
+  Button,
 } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { ExternalLinkIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "react-scroll";
+
 function DrawerExample() {
+  const handleDownload = async () => {
+    const driveLink =
+      "https://drive.google.com/file/d/13glAAJDaMXdXr8iCqUOMSZT8BDzXIVxU/view?usp=sharing";
+    window.open(driveLink, "_blank");
+  };
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
 
@@ -89,6 +96,13 @@ function DrawerExample() {
             >
               Contact
             </Link>
+          </DrawerHeader>
+          <DrawerHeader>
+            <a href="https://drive.google.com/uc?export=download&id=13glAAJDaMXdXr8iCqUOMSZT8BDzXIVxU">
+              <Button onClick={handleDownload}>
+                RESUME <ExternalLinkIcon ml="10px" />
+              </Button>
+            </a>
           </DrawerHeader>
         </DrawerContent>
       </Drawer>

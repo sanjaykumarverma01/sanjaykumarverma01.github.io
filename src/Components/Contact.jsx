@@ -10,7 +10,8 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
-import { BsGithub, BsLinkedin } from "react-icons/bs";
+import { BsGithub, BsLinkedin, BsTelephoneFill } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -130,6 +131,39 @@ const Contact = () => {
               You can also connect with me on
             </Text>
           </Box>
+
+          <Button
+            mt={4}
+            bgColor={bgC}
+            color={tc}
+            border={bc}
+            _hover={{
+              border: bc1,
+              bgColor: bgC1,
+              color: tc1,
+            }}
+            borderRadius={["50", "40", "30", "20"]}
+          >
+            <MdEmail fontSize="20px" />
+            <Text marginLeft="10px">vermasanjaykumar97@gmail.com</Text>
+          </Button>
+          <br />
+          <Button
+            mt={4}
+            bgColor={bgC}
+            color={tc}
+            border={bc}
+            _hover={{
+              border: bc1,
+              bgColor: bgC1,
+              color: tc1,
+            }}
+            borderRadius={["50", "40", "30", "20"]}
+          >
+            <BsTelephoneFill fontSize="20px"/>
+            <Text marginLeft="10px">8169863919</Text>
+          </Button>
+
           <Flex
             width={["100%", "80%", "60%"]}
             margin="auto"

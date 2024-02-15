@@ -11,14 +11,38 @@ import {
 import { Link } from "react-scroll";
 import { BsFillMoonFill, BsSun } from "react-icons/bs";
 import DrawerExample from "./Drawer";
+import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 const Navbar = () => {
+  const handleDownload = async () => {
+    const driveLink =
+      "https://drive.google.com/file/d/13glAAJDaMXdXr8iCqUOMSZT8BDzXIVxU/view?usp=sharing";
+    window.open(driveLink, "_blank");
+  };
   const { colorMode, toggleColorMode } = useColorMode();
   if (colorMode === "dark") {
     var bgColor = "#222e3d";
     var tc = "#93989E";
+    var bc = "2px solid rgb(150, 150, 226)";
+    var tcb = "#93989E";
+    var bgC = "#222e3d";
+    var t = "#93989E";
+
+    // hover
+    var bc1 = "2px solid #00B9E8";
+    var tc1 = "#00B9E8";
+    var bgC1 = "#222e3d";
   } else {
     var bgColor = "gray.100";
+    // normal
+    bc = "2px solid white";
+    tcb = "white";
+    bgC = "#00B9E8";
+    t = "black";
+    // hover
+    bc1 = "2px solid #00B9E8";
+    tc1 = "#00B9E8";
+    bgC1 = "white";
   }
   return (
     <Box
@@ -60,7 +84,10 @@ const Navbar = () => {
           gap={["3", "6", "8", "10"]}
           size={["xs", "sm", "md", "lg"]}
         >
-          <Box size={["xs", "sm", "md", "lg"]} display={["none","none","block","block"]}>
+          <Box
+            size={["xs", "sm", "md", "lg"]}
+            display={["none", "none", "block", "block"]}
+          >
             <Link
               to="main"
               smooth={true}
@@ -89,7 +116,10 @@ const Navbar = () => {
               </Text>
             </Link>
           </Box>
-          <Box size={["xs", "sm", "md", "lg"]} display={["none","none","block","block"]}>
+          <Box
+            size={["xs", "sm", "md", "lg"]}
+            display={["none", "none", "block", "block"]}
+          >
             <Link
               to="about"
               smooth={true}
@@ -118,7 +148,10 @@ const Navbar = () => {
               </Text>
             </Link>
           </Box>
-          <Box size={["xs", "sm", "md", "lg"]} display={["none","none","block","block"]}>
+          <Box
+            size={["xs", "sm", "md", "lg"]}
+            display={["none", "none", "block", "block"]}
+          >
             <Link
               to="skills"
               smooth={true}
@@ -147,7 +180,10 @@ const Navbar = () => {
               </Text>
             </Link>
           </Box>
-          <Box size={["xs", "sm", "md", "lg"]} display={["none","none","block","block"]}>
+          <Box
+            size={["xs", "sm", "md", "lg"]}
+            display={["none", "none", "block", "block"]}
+          >
             <Link
               to="projects"
               smooth={true}
@@ -176,7 +212,10 @@ const Navbar = () => {
               </Text>
             </Link>
           </Box>
-          <Box size={["xs", "sm", "md", "lg"]} display={["none","none","block","block"]}>
+          <Box
+            size={["xs", "sm", "md", "lg"]}
+            display={["none", "none", "block", "block"]}
+          >
             <Link
               to="contact"
               smooth={true}
@@ -204,6 +243,27 @@ const Navbar = () => {
                 Contact
               </Text>
             </Link>
+          </Box>
+          <Box
+            size={["xs", "sm", "md", "lg"]}
+            display={["none", "none", "block", "block"]}
+          >
+            <a href="https://drive.google.com/uc?export=download&id=13glAAJDaMXdXr8iCqUOMSZT8BDzXIVxU">
+              <Button
+                onClick={handleDownload}
+                bgColor={bgC}
+                color={tcb}
+                border={bc}
+                _hover={{
+                  color: tc1,
+                  bgColor: bgC1,
+                  border: bc1,
+                }}
+                zIndex={700}
+              >
+                RESUME <ExternalLinkIcon ml="10px" />
+              </Button>
+            </a>
           </Box>
           <Box _hover={{ cursor: "pointer" }} size={["xs", "sm", "md", "lg"]}>
             <Button

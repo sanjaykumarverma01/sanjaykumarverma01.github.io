@@ -4,12 +4,12 @@ import {
   Flex,
   Heading,
   Img,
+  Link,
   Text,
   useColorMode,
 } from "@chakra-ui/react";
 import React from "react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
-import { saveAs } from "file-saver";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 
 const Home = () => {
@@ -75,21 +75,23 @@ const Home = () => {
             latest front-end and back-end technologies.
           </Text>
           <Box textAlign="left">
-            <Button
-              onClick={handleDownload}
-              mt="1rem"
-              bgColor={bgC}
-              color={tc}
-              border={bc}
-              _hover={{
-                color: tc1,
-                bgColor: bgC1,
-                border: bc1,
-              }}
-              zIndex={700}
-            >
-              RESUME <ExternalLinkIcon ml="10px" />
-            </Button>
+            <Link href="https://drive.google.com/uc?export=download&id=13glAAJDaMXdXr8iCqUOMSZT8BDzXIVxU">
+              <Button
+                onClick={handleDownload}
+                mt="1rem"
+                bgColor={bgC}
+                color={tc}
+                border={bc}
+                _hover={{
+                  color: tc1,
+                  bgColor: bgC1,
+                  border: bc1,
+                }}
+                zIndex={700}
+              >
+                RESUME <ExternalLinkIcon ml="10px" />
+              </Button>
+            </Link>
           </Box>
         </Box>
         <Box w={["90%", "90%", "40%", "40%"]}>
@@ -126,22 +128,24 @@ const Home = () => {
             pressure, a passionate problem solver, and a quick learner.
           </Text>
           <Box textAlign="left">
-            <Button
-              onClick={handleDownload}
-              mt="1rem"
-              borderRadius={["50", "40", "30", "20"]}
-              bgColor={bgC}
-              color={tc}
-              border={bc}
-              _hover={{
-                color: tc1,
-                bgColor: bgC1,
-                border: bc1,
-              }}
-              zIndex={700}
-            >
-              RESUME <ExternalLinkIcon ml="10px" />
-            </Button>
+            <Link href="https://drive.google.com/uc?export=download&id=13glAAJDaMXdXr8iCqUOMSZT8BDzXIVxU">
+              <Button
+                onClick={handleDownload}
+                mt="1rem"
+                borderRadius={["50", "40", "30", "20"]}
+                bgColor={bgC}
+                color={tc}
+                border={bc}
+                _hover={{
+                  color: tc1,
+                  bgColor: bgC1,
+                  border: bc1,
+                }}
+                zIndex={700}
+              >
+                RESUME <ExternalLinkIcon ml="10px" />
+              </Button>
+            </Link>
           </Box>
         </Box>
       </Flex>
