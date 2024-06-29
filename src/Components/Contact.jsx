@@ -16,7 +16,7 @@ import { MdEmail } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
   const form = useRef();
 
   const sendEmail = (e) => {
