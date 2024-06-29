@@ -9,6 +9,7 @@ import {
   Textarea,
   Link,
   HStack,
+  useToast,
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import { BsGithub, BsLinkedin, BsTelephoneFill } from "react-icons/bs";
@@ -18,6 +19,7 @@ import emailjs from "@emailjs/browser";
 const Contact = () => {
   const { colorMode } = useColorMode();
   const form = useRef();
+  const toast = useToast();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -30,10 +32,26 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result);
+          // console.log(result);
+          if (result.status === 200) {
+            toast({
+              title: "Email send Successful",
+              status: "success",
+              duration: 3000,
+              isClosable: true,
+              position: "bottom",
+            });
+          }
         },
         (error) => {
-          console.log(error);
+          // console.log(error);
+          toast({
+            title: "Error Occured!",
+            status: "error",
+            duration: 3000,
+            isClosable: true,
+            position: "bottom",
+          });
         }
       );
     e.target.reset();
