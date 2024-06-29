@@ -51,5 +51,11 @@
 .linkedin:hover {
   color: #0a66c2;
   background-color: white;
+  border-radius: 5px;
+}
+
+.github:hover {
+  color: teal;
+  border-radius: 50%;
 }
 

@@ -5,7 +5,6 @@ import {
   VStack,
   Button,
   useColorMode,
-  Flex,
   Text,
   Textarea,
   Link,
@@ -158,12 +157,12 @@ const Contact = () => {
             <BsTelephoneFill fontSize="20px" />
             <Text ml="0.5rem">8169863919</Text>
           </Button>
-          <Box _hover={{ color: "teal" }} m={["0.5rem", "1rem"]}>
+          <Box m={["0.5rem", "1rem"]} className="github">
             <Link href="https://github.com/sanjaykumarverma01" target="_blank">
               <BsGithub fontSize="40px" />
             </Link>
           </Box>
-          <Box m={["0.5rem", "1rem"]}>
+          <Box m={["0.5rem", "1rem"]} className="linkedin">
             <Link
               href="https://www.linkedin.com/in/sanjaykumar-verma-a73349219/"
               target="_blank"
