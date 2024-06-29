@@ -8,6 +8,8 @@ import {
   Flex,
   Text,
   Textarea,
+  Link,
+  HStack,
 } from "@chakra-ui/react";
 import React, { useRef } from "react";
 import { BsGithub, BsLinkedin, BsTelephoneFill } from "react-icons/bs";
@@ -120,20 +122,13 @@ const Contact = () => {
             </Button>
           </VStack>
         </form>
-        <Box mt={["1rem", "2rem", "3rem"]}>
-          <Box>
-            <Text
-              fontSize={["15px", "16px", "17px", "18px"]}
-              fontWeight="500"
-              mt=".5rem"
-              color={tc}
-            >
-              You can also connect with me on
-            </Text>
-          </Box>
-
+      </Box>
+      <Box mt={["1rem", "2rem", "3rem"]}>
+        <HStack
+          justifyContent={["center", "space-around", "space-evenly"]}
+          flexWrap="wrap"
+        >
           <Button
-            mt={4}
             bgColor={bgC}
             color={tc}
             border={bc}
@@ -142,14 +137,13 @@ const Contact = () => {
               bgColor: bgC1,
               color: tc1,
             }}
-            borderRadius={["50", "40", "30", "20"]}
+            borderRadius={["50px", "40px", "30px", "20px"]}
+            m={["0.5rem", "1rem"]}
           >
             <MdEmail fontSize="20px" />
-            <Text marginLeft="10px">vermasanjaykumar97@gmail.com</Text>
+            <Text ml="0.5rem">vermasanjaykumar97@gmail.com</Text>
           </Button>
-          <br />
           <Button
-            mt={4}
             bgColor={bgC}
             color={tc}
             border={bc}
@@ -158,37 +152,26 @@ const Contact = () => {
               bgColor: bgC1,
               color: tc1,
             }}
-            borderRadius={["50", "40", "30", "20"]}
+            borderRadius={["50px", "40px", "30px", "20px"]}
+            m={["0.5rem", "1rem"]}
           >
-            <BsTelephoneFill fontSize="20px"/>
-            <Text marginLeft="10px">8169863919</Text>
+            <BsTelephoneFill fontSize="20px" />
+            <Text ml="0.5rem">8169863919</Text>
           </Button>
-
-          <Flex
-            width={["100%", "80%", "60%"]}
-            margin="auto"
-            justifyContent="space-evenly"
-            mt="1rem"
-          >
-            <Box _hover={{ color: "teal" }}>
-              <a href="https://github.com/sanjaykumarverma01" target="_blank">
-                <BsGithub fontSize="40px" className="github" />
-              </a>
-            </Box>
-            <Box>
-              <a
-                href="https://www.linkedin.com/in/sanjaykumar-verma-a73349219/"
-                target="_blank"
-              >
-                <BsLinkedin
-                  fontSize="40px"
-                  className="linkedin"
-                  _hover={{ bgColor: "#0A66C2" }}
-                />
-              </a>
-            </Box>
-          </Flex>
-        </Box>
+          <Box _hover={{ color: "teal" }} m={["0.5rem", "1rem"]}>
+            <Link href="https://github.com/sanjaykumarverma01" target="_blank">
+              <BsGithub fontSize="40px" />
+            </Link>
+          </Box>
+          <Box m={["0.5rem", "1rem"]}>
+            <Link
+              href="https://www.linkedin.com/in/sanjaykumar-verma-a73349219/"
+              target="_blank"
+            >
+              <BsLinkedin fontSize="40px" />
+            </Link>
+          </Box>
+        </HStack>
       </Box>
     </Box>
   );
