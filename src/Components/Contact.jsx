@@ -11,17 +11,19 @@ import {
   HStack,
   useToast,
 } from "@chakra-ui/react";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { BsGithub, BsLinkedin, BsTelephoneFill } from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const { colorMode } = useColorMode();
+  const [loading, setLoading] = useState(false)
   const form = useRef();
   const toast = useToast();
 
   const sendEmail = (e) => {
+    setLoading(true)
     e.preventDefault();
     emailjs
       .sendForm(
@@ -32,7 +34,7 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          // console.log(result);
+          // console.log("result",result);
           if (result.status === 200) {
             toast({
               title: "Email send Successful",
@@ -42,6 +44,7 @@ const Contact = () => {
               position: "bottom",
             });
           }
+          setLoading(false)
         },
         (error) => {
           // console.log(error);
@@ -52,6 +55,7 @@ const Contact = () => {
             isClosable: true,
             position: "bottom",
           });
+          setLoading(false)
         }
       );
     e.target.reset();
@@ -134,6 +138,7 @@ const Contact = () => {
                 color: tc1,
               }}
               borderRadius={["50", "40", "30", "20"]}
+              isLoading={loading}
             >
               Send
             </Button>
