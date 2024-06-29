@@ -34,6 +34,19 @@
   cursor: pointer;
   color: #59C9C8;
 }
+.node:hover{
+  cursor: pointer;
+  color:#83CD29
+}
+.express:hover{
+  cursor: pointer;
+  color:#F10301
+}
+
+.mongodb:hover{
+  cursor: pointer;
+  color:#00ED64
+}
 
 .linkedin:hover {
   color: #0a66c2;
