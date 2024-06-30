@@ -85,7 +85,8 @@ const Projects = () => {
         textAlign="center"
         w={["90%", "90%", "80%"]}
         justifyContent="space-around"
-        gap={10}
+        mb={["0", "0", "0", "50px"]}
+        direction={["column", "column", "row"]}
       >
         <ProjectCard
           imgUrl="https://github.com/sanjaykumarverma01/portfolio/blob/main/src/project%20img/Nordstrom%20rack.png?raw=true"
@@ -113,7 +114,7 @@ const Projects = () => {
           projDesc="My-Chat-App is a Full Stack Chatting App. Uses Socket.io for real-time communication and stores user details in encrypted format in Mongo DB Database."
           githubUrl="https://github.com/sanjaykumarverma01/Chat_App"
           projLiveLink="chat-app-syzw.onrender.com"
-          iconArr={["react", "node", "express","mongodb","chakra"]}
+          iconArr={["react", "node", "express", "mongodb", "chakra"]}
           bc={bc}
           bgc={bgc}
           tc1={tc1}
