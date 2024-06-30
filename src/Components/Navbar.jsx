@@ -12,6 +12,7 @@ import { Link } from "react-scroll";
 import { BsFillMoonFill, BsSun } from "react-icons/bs";
 import DrawerExample from "./Drawer";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
+import Logo from "../Logo.png"
 
 const Navbar = () => {
   const handleDownload = async () => {
@@ -33,7 +34,7 @@ const Navbar = () => {
     var tc1 = "#00B9E8";
     var bgC1 = "#222e3d";
   } else {
-    var bgColor = "gray.100";
+    bgColor = "gray.100";
     // normal
     bc = "2px solid white";
     tcb = "white";
@@ -69,7 +70,7 @@ const Navbar = () => {
         >
           <Box display={["none", "none", "block", "block"]}>
             <Img
-              src="https://github.com/SK-WebDeveloper/portfolio/blob/main/src/logo%20png.png?raw=true"
+              src={Logo}
               alt="logo"
               width={[5, 10, 15, 20]}
               height={[5, 10, 15, 20]}

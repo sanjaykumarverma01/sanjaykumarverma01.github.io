@@ -6,9 +6,10 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import ProjectCard from "./misc/ProjectCard";
-
+import NordStromRack from "../project img/Nordstrom_rack.png"
+import BathandBody from "../project img/BathandBody.png"
 const Projects = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
   if (colorMode === "dark") {
     // normal
     var bc = "2px solid rgb(150, 150, 226)";
@@ -64,7 +65,7 @@ const Projects = () => {
           textC={textC}
         />
         <ProjectCard
-          imgUrl="https://github.com/sanjaykumarverma01/portfolio/blob/main/src/project%20img/BathandBody.png?raw=true"
+          imgUrl={BathandBody}
           title="Bath & Body Works Clone"
           projDesc="Bath and Body Works is your go-to place for gifts & goodies that surprise & delight. From fresh fragrances to soothing skin care, we make finding your perfect"
           githubUrl="https://github.com/sanjaykumarverma01/Bath-Body-Works"
@@ -89,7 +90,7 @@ const Projects = () => {
         direction={["column", "column", "row"]}
       >
         <ProjectCard
-          imgUrl="https://github.com/sanjaykumarverma01/portfolio/blob/main/src/project%20img/Nordstrom%20rack.png?raw=true"
+          imgUrl={NordStromRack}
           title="Nordstrom Rack Clone"
           projDesc="Nordstrom Rack is an American off-price department store chain
               founded in 1973, and a sister brand to the luxury department store

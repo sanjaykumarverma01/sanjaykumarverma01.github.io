@@ -1,16 +1,16 @@
 import { Box, Flex, Heading, Image, useColorMode } from "@chakra-ui/react";
 import React from "react";
-import contribution1 from "../Assets/contributions1.png";
-import contribution2 from "../Assets/contributions2.png";
+import contributiond from "../Assets/contributionsd.png";
+import contributionn from "../Assets/contributionsn.png";
 const GithubCard = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
   if (colorMode === "dark") {
     var bc = "2px solid rgb(150, 150, 226)";
     var tc = "#93989E";
   }
   if (colorMode === "light") {
-    // var bc = "2px solid teal";
-    var tc = "#00B9E8";
+    bc = "2px solid teal";
+    tc = "#00B9E8";
   }
   return (
     <Box size={["xs", "sm", "md", "lg"]} mt={["20px", "30px", "40px", "50px"]}>
@@ -53,7 +53,9 @@ const GithubCard = () => {
           />
         </Box>
       </Flex>
-      <Heading color={tc} mt={["20px", "30px", "40px", "50px"]}>Github Calendar</Heading>
+      <Heading color={tc} mt={["20px", "30px", "40px", "50px"]}>
+        Github Calendar
+      </Heading>
       <Box
         className="dev"
         w={["80%", "80%", "75%", "76%"]}
@@ -62,10 +64,10 @@ const GithubCard = () => {
         border={bc}
         borderRadius="5px"
       >
-        
         <Image
           w="100%"
-          src={colorMode === "light" ? contribution1 : contribution2}
+          h="30rem"
+          src={colorMode === "light" ? contributiond : contributionn}
           borderRadius="5px"
         />
       </Box>

@@ -22,8 +22,8 @@ import {
   SiTypescript,
 } from "react-icons/si";
 
-const SkillCard = ({}) => {
-  const { colorMode, toggleColorMode } = useColorMode();
+const SkillCard = () => {
+  const { colorMode } = useColorMode();
   if (colorMode === "dark") {
     var bc = "2px solid rgb(150, 150, 226)";
     var bgColor = "#222e3d";

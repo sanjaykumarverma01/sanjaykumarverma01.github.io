@@ -12,14 +12,14 @@ import React from "react";
 import Profile from "../Assets/Profile.png";
 
 const About = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
   if (colorMode === "dark") {
-    var bc = "2px solid rgb(150, 150, 226)";
+    // var bc = "2px solid rgb(150, 150, 226)";
     var tc = "#93989E";
   }
   if (colorMode === "light") {
-    var bc = "2px solid teal";
-    var tc = "#00B9E8";
+    // bc = "2px solid teal";
+    tc = "#00B9E8";
   }
 
   return (

@@ -50,7 +50,7 @@ const ProjectCard = ({
     >
       <Img
         src={imgUrl}
-        alt=""
+        alt={title}
         borderTopRadius="10px"
         height="260"
         width="100%"

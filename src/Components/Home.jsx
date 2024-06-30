@@ -11,6 +11,7 @@ import {
 import React from "react";
 import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
+import HomeGif from "../home.gif"
 
 const Home = () => {
   const handleDownload = () => {
@@ -20,7 +21,7 @@ const Home = () => {
     );
   };
 
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
   if (colorMode === "dark") {
     // normal
     var bc = "2px solid rgb(150, 150, 226)";
@@ -98,7 +99,7 @@ const Home = () => {
           <Img
             w="100%"
             h={["200px", "250px", "300px", "350px"]}
-            src="https://github.com/SK-WebDeveloper/portfolio/blob/main/src/home.gif?raw=true"
+            src={HomeGif}
             alt="Home Page"
             borderRadius="3px"
           />
@@ -175,7 +176,11 @@ const Home = () => {
             _hover={{ color: "teal" }}
             fontSize={["20px", "30px", "40px", "40px"]}
           >
-            <a href="https://github.com/sanjaykumarverma01" target="_blank">
+            <a
+              href="https://github.com/sanjaykumarverma01"
+              target="_blank"
+              rel="noreferrer"
+            >
               <BsGithub />
             </a>
           </Box>
@@ -186,6 +191,7 @@ const Home = () => {
             <a
               href="https://www.linkedin.com/in/sanjaykumar-verma-a73349219/"
               target="_blank"
+              rel="noreferrer"
             >
               <BsLinkedin />
             </a>

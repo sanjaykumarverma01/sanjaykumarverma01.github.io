@@ -1,10 +1,10 @@
-import { Heading, Box, useColorMode, Text } from "@chakra-ui/react";
+import { Heading, Box, useColorMode } from "@chakra-ui/react";
 import React from "react";
 import GithubCard from "./GithubCard";
 import SkillCard from "./SkillCard";
 
 const Skills = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
+  const { colorMode } = useColorMode();
   if (colorMode === "dark") {
     var tc = "rgb(150, 150, 226)";
     var tc2 = "#00B9E8";
