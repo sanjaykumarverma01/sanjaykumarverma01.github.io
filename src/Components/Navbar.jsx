@@ -27,7 +27,7 @@ const Navbar = () => {
     var bc = "2px solid rgb(150, 150, 226)";
     var tcb = "#93989E";
     var bgC = "#222e3d";
-    var t = "#93989E";
+    // var t = "#93989E";
 
     // hover
     var bc1 = "2px solid #00B9E8";
@@ -39,7 +39,7 @@ const Navbar = () => {
     bc = "2px solid white";
     tcb = "white";
     bgC = "#00B9E8";
-    t = "black";
+    // t = "black";
     // hover
     bc1 = "2px solid #00B9E8";
     tc1 = "#00B9E8";
