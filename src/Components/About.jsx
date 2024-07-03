@@ -66,7 +66,7 @@ const About = () => {
 
           <Text textAlign="justify" display={["none","none","block","block"]}>
             Web Developer who loves to transform ideas into reality using web
-            developement tools through coding.
+            development tools through coding.
           </Text>
           <Text textAlign="justify" display={["block","block","none","none"]}>
             Web Developer who loves to transform ideas into reality using web
