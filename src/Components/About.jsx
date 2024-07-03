@@ -70,7 +70,7 @@ const About = () => {
           </Text>
           <Text textAlign="justify" display={["block","block","none","none"]}>
             Web Developer who loves to transform ideas into reality using web
-            developement tools through coding.Motivated developer with expertise in creating custom websites with
+            development tools through coding.Motivated developer with expertise in creating custom websites with
             front-end and back-end languages, responsive frameworks and
             database.
           </Text>
