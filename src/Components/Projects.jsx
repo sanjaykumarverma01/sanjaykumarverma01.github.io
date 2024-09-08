@@ -114,7 +114,7 @@ const Projects = () => {
           title="Chat Application"
           projDesc="My-Chat-App is a Full Stack Chatting App. Uses Socket.io for real-time communication and stores user details in encrypted format in Mongo DB Database."
           githubUrl="https://github.com/sanjaykumarverma01/Chat_App"
-          projLiveLink="chat-app-syzw.onrender.com"
+          projLiveLink="https://chat-app-syzw.onrender.com/"
           iconArr={["react", "node", "express", "mongodb", "chakra"]}
           bc={bc}
           bgc={bgc}
